@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/catherinegiraldo/Documents/CodePath/phlix/phlix/MovieGridCell.swift">
+   </FileRef>
+   <FileRef
       location = "group:phlix.xcodeproj">
    </FileRef>
    <FileRef

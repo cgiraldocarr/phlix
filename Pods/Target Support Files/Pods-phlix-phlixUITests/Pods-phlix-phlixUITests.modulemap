@@ -1,0 +1,6 @@
+framework module Pods_phlix_phlixUITests {
+  umbrella header "Pods-phlix-phlixUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

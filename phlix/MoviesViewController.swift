@@ -18,7 +18,6 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -82,14 +81,27 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // Called when leaving your screen and preparing the next
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        // Find the selected movie
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        
+        let movie = movies[indexPath.row]
+        
+        // Pass the eselected movie to the details view controller
+        let detailsViewController = segue.destination as! MovieDetailsViewController
+        detailsViewController.movie = movie
+        
+        // dehighlights the selection from the main view controller after you go back to it.
+        tableView.deselectRow(at: indexPath, animated: true)
     }
-    */
-
+ 
 }

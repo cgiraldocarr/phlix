@@ -1,0 +1,6 @@
+framework module Pods_phlix {
+  umbrella header "Pods-phlix-umbrella.h"
+
+  export *
+  module * { export * }
+}
